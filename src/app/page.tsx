@@ -1,5 +1,5 @@
 "use client";
-
+//dd
 import Container from "@/app/_components/container";
 import React, { useState, useEffect } from "react";
 import AWS from "../../awsConfig";
@@ -71,7 +71,7 @@ export default function Index() {
     <main>
       <Container>
         <Intro />
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 my-4 w-full h-full ">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 my-4 w-full h-full">
           {posts.map((post: any) => (
             <button
               key={post.slug}
