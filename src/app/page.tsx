@@ -71,12 +71,12 @@ export default function Index() {
     <main>
       <Container>
         <Intro />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 my-4 w-full h-full md:w-8/12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 my-4 w-full h-full ">
           {posts.map((post: any) => (
             <button
               key={post.slug}
               onClick={() => router.push(`/posts/${post.slug}`)}
-              className="w-full bg-zinc-100 h-fit rounded-lg border border-gray-300 shadow hover:shadow-2xl hover:scale-[101%] p-2 transition-all"
+              className="w-full bg-zinc-100 h-full rounded-lg border border-gray-300 shadow hover:shadow-2xl hover:scale-[101%] p-2 transition-all"
             >
               <Image
                 src={post.coverImage}
@@ -89,7 +89,7 @@ export default function Index() {
                   {post.title}
                 </h2>
                 {post?.author && (
-                  <p className="text-sm text-zinc-400">@{post.author.name}</p>
+                  <p className="text-sm text-zinc-400">@{post.author}</p>
                 )}
                 <p className="text-zinc-500 text-start">{post.excerpt}</p>
               </div>
